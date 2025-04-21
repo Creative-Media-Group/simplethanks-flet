@@ -25,11 +25,13 @@ def main(page: ft.Page):
     def on_resized(e):
         page.update()
 
+    page.adaptive = True
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     page.on_resized = on_resized
     # page.scroll = ft.ScrollMode.AUTO
     # page.expand = True
+    page.appbar = ft.AppBar(title=ft.Text("Simple Thanks"))
     page.add(
         ft.SafeArea(
             ft.Column(
