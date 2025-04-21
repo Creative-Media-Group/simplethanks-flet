@@ -28,6 +28,8 @@ def main(page: ft.Page):
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     page.on_resized = on_resized
+    # page.scroll = ft.ScrollMode.AUTO
+    # page.expand = True
     page.add(
         ft.SafeArea(
             ft.Column(
@@ -39,13 +41,42 @@ def main(page: ft.Page):
                     ft.Row(
                         controls=[
                             mybutton(
-                                text="Hello",
+                                text="Happy Birthday",
+                                on_click=lambda _: play(),
+                                width=page.width * 0.5,
+                            )
+                        ]
+                    ),
+                    ft.Row(
+                        controls=[
+                            mybutton(
+                                text="Mothers Day",
+                                on_click=lambda _: play(),
+                                width=page.width * 0.5,
+                            )
+                        ]
+                    ),
+                    ft.Row(
+                        controls=[
+                            mybutton(
+                                text="Fathers Day",
+                                on_click=lambda _: play(),
+                                width=page.width * 0.5,
+                            )
+                        ]
+                    ),
+                    ft.Row(
+                        controls=[
+                            mybutton(
+                                text="Website",
                                 on_click=lambda _: play(),
                                 width=page.width * 0.5,
                             )
                         ]
                     ),
                 ],
+                # width=page.width * 0.5,
+                # scroll=True,
                 expand=True,
                 alignment=ft.MainAxisAlignment.CENTER,
             )
