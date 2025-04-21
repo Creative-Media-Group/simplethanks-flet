@@ -39,5 +39,5 @@ flet = { extras = ["all"], version = "0.27.6" }
 # and `--android-signing-key-password` options or
 # FLET_ANDROID_SIGNING_KEY_STORE_PASSWORD
 # and FLET_ANDROID_SIGNING_KEY_PASSWORD environment variables.
-key_store = "$KEYPATH"  # --android-signing-key-store
-key_alias = "$KEYALIAS"
+key_store = "~/Dokumente/GitHub/keystores-cmg/release.keystore"  # --android-signing-key-store
+key_alias = "cmg"
