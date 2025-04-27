@@ -10,7 +10,9 @@ jobs:
           command: gem install bundler -v 2.4.22
       - run:
           name: Install Dependencies
-          command: bundle install
+          command: |
+            cd path/to/your/project # Ensure this points to the directory containing your Gemfile
+            bundle install
       - run:
           name: Run Fastlane
           command: bundle exec fastlane ios build
