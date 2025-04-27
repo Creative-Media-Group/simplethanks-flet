@@ -11,7 +11,7 @@ jobs:
       - run:
           name: Install Dependencies
           command: |
-            cd path/to/your/project # Ensure this points to the directory containing your Gemfile
+            cd /actual/path/to/your/project # Ensure this points to the directory containing your Gemfile
             bundle install
       - run:
           name: Run Fastlane
