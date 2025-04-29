@@ -19,7 +19,7 @@ product = "Simple Thanks"
 # company name to display in about app dialogs
 company = "Creative Media Group"
 
-tool.flet.android.signing]
+[tool.flet.android.signing]
 # store and key passwords can be passed with `--android-signing-key-store-password`
 # and `--android-signing-key-password` options or
 # FLET_ANDROID_SIGNING_KEY_STORE_PASSWORD
