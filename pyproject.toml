@@ -5,7 +5,7 @@ description = ""
 readme = "README.md"
 requires-python = ">=3.9"
 authors = [{ name = "Flet developer", email = "you@example.com" }]
-dependencies = ["flet==0.27.6", "mylocale", "flet_localisation"]
+dependencies = ["flet==0.28.2", "mylocale", "flet_localisation"]
 
 [tool.flet]
 # org name in reverse domain name notation, e.g. "com.mycompany".
@@ -34,10 +34,10 @@ copyright = "Copyright (C) 2025 by Creative Media Group"
 path = "src"
 
 [tool.uv]
-dev-dependencies = ["flet[all]==0.27.6"]
+dev-dependencies = ["flet[all]==0.28.2"]
 
 [tool.poetry]
 package-mode = false
 
 [tool.poetry.group.dev.dependencies]
-flet = { extras = ["all"], version = "0.27.6" }
+flet = { extras = ["all"], version = "0.28.2" }
