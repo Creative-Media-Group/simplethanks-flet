@@ -1,4 +1,5 @@
 import flet as ft
+import flet_audio as fta
 
 
 def mybutton(text: str, on_click, width: int, disabled: bool = False):
@@ -17,8 +18,8 @@ def mybutton(text: str, on_click, width: int, disabled: bool = False):
     )
 
 
-def play():
-    pass
+def play(audio_obj: ft.Control):
+    audio_obj.play()
 
 
 def main(page: ft.Page):
@@ -31,7 +32,11 @@ def main(page: ft.Page):
     page.on_resized = on_resized
     # page.scroll = ft.ScrollMode.AUTO
     # page.expand = True
+    audio1 = fta.Audio(
+        src="happy-birthday-whistled.wav",
+    )
     page.appbar = ft.AppBar(title=ft.Text("Simple Thanks"))
+    page.overlay.append(audio1)
     page.add(
         ft.SafeArea(
             ft.Column(
@@ -44,7 +49,7 @@ def main(page: ft.Page):
                         controls=[
                             mybutton(
                                 text="Happy Birthday",
-                                on_click=lambda _: play(),
+                                on_click=lambda _: play(audio_obj=audio1),
                                 width=page.width * 0.5,
                             )
                         ]
@@ -53,7 +58,7 @@ def main(page: ft.Page):
                         controls=[
                             mybutton(
                                 text="Mothers Day",
-                                on_click=lambda _: play(),
+                                on_click=lambda _: print("Mothers Day"),
                                 width=page.width * 0.5,
                             )
                         ]
@@ -62,7 +67,7 @@ def main(page: ft.Page):
                         controls=[
                             mybutton(
                                 text="Fathers Day",
-                                on_click=lambda _: play(),
+                                on_click=lambda _: print("Mothers Day"),
                                 width=page.width * 0.5,
                             )
                         ]
@@ -71,7 +76,7 @@ def main(page: ft.Page):
                         controls=[
                             mybutton(
                                 text="Website",
-                                on_click=lambda _: play(),
+                                on_click=lambda _: print("Mothers Day"),
                                 width=page.width * 0.5,
                             )
                         ]
