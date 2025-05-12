@@ -53,13 +53,13 @@ def main(page: ft.Page):
             ft.Column(
                 controls=[
                     ft.Row(
-                        controls=[ft.Text("Thank you")],
+                        controls=[ft.Text(THANKYOU)],
                         alignment=ft.MainAxisAlignment.CENTER,
                     ),
                     ft.Row(
                         controls=[
                             mybutton(
-                                text="Happy Birthday",
+                                text=BIRTHDAY(page=page),
                                 on_click=lambda _: play(audio_obj=audio1),
                                 width=page.width * 0.5,
                             )

@@ -1,4 +1,4 @@
-from localisation.translations import (
+from localisation.translation import (
     BIRTHDAY,
     FATHERSDAY,
     HAPPYFATHERSDAY,
