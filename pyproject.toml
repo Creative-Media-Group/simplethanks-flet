@@ -19,6 +19,16 @@ product = "Simple Thanks"
 # company name to display in about app dialogs
 company = "Creative Media Group"
 
+[tool.flet.android]
+dependencies = [
+  "pyjnius"
+]
+
+[tool.flet.ios]
+dependencies = [
+  "pyobjus"
+]
+
 [tool.flet.android.signing]
 # store and key passwords can be passed with `--android-signing-key-store-password`
 # and `--android-signing-key-password` options or
