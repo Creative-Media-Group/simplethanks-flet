@@ -1,1 +1,11 @@
-from localisation.translations import *
+from localisation.translations import (
+    BIRTHDAY,
+    FATHERSDAY,
+    HAPPYFATHERSDAY,
+    HAPPYMOTHERSDAY,
+    MOTHERSDAY,
+    THANKYOU,
+    FORMALNAME,
+    DESCRIPTION,
+    SUPPORTEDPLATFORM,
+)
