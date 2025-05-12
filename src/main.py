@@ -87,7 +87,9 @@ def main(page: ft.Page):
                         controls=[
                             mybutton(
                                 text="Website",
-                                on_click=lambda _: print("Mothers Day"),
+                                on_click=lambda _: page.launch_url(
+                                    "https://github.com/Creative-Media-Group/simplethanks-flet"
+                                ),
                                 width=page.width * 0.5,
                             )
                         ]
