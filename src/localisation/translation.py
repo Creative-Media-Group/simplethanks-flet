@@ -1,7 +1,6 @@
 import os
 from mylocale import tr
 from flet_localisation import locale
-import flet as ft
 
 trfile = f"{os.path.dirname(__file__)}/localisation.csv"
 
