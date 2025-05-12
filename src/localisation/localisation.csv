@@ -1,2 +1,10 @@
-stringname,en
-HELLOWORLD,Hello World
+stringname,en,de
+BIRTHDAY,Birthday,Geburtstag
+FATHERSDAY,Fathers day,Vatertag
+HAPPYFATHERSDAY,Happy Fathers day,Fröhlicher Vatertag
+HAPPYMOTHERSDAY,Happy Mothers day,Fröhlicher Muttertag
+MOTHERSDAY,Mothers day,Muttertag
+THANKYOU,"Thank you, ...","Danke, …"
+FORMALNAME,Simple Thanks,Einfaches Danke
+DESCRIPTION,A simple thank you,Ein einfaches Danke
+SUPPORTEDPLATFORM,This action is not supported on that platform,Diese Aktion wird auf dieser Plattform nicht unterstützt
