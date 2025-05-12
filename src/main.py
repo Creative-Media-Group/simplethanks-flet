@@ -44,7 +44,10 @@ def main(page: ft.Page):
     page.on_resized = on_resized
     # page.scroll = ft.ScrollMode.AUTO
     # page.expand = True
-    share = SharePlus()
+    share = SharePlus(
+        on_share_completed=lambda e: print(f"Completed: {e.data}"),
+        on_share_dismissed=lambda e: print(f"Dismissed: {e.data}"),
+    )
     audio1 = fta.Audio(
         src="happy-birthday-whistled.wav",
     )
