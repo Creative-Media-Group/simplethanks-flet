@@ -53,7 +53,7 @@ def main(page: ft.Page):
             ft.Column(
                 controls=[
                     ft.Row(
-                        controls=[ft.Text(THANKYOU)],
+                        controls=[ft.Text(THANKYOU(page=page))],
                         alignment=ft.MainAxisAlignment.CENTER,
                     ),
                     ft.Row(
@@ -68,8 +68,8 @@ def main(page: ft.Page):
                     ft.Row(
                         controls=[
                             mybutton(
-                                text="Mothers Day",
-                                on_click=lambda _: print("Mothers Day"),
+                                text=MOTHERSDAY(page=page),
+                                on_click=lambda _: print(MOTHERSDAY(page=page)),
                                 width=page.width * 0.5,
                             )
                         ]
@@ -77,8 +77,8 @@ def main(page: ft.Page):
                     ft.Row(
                         controls=[
                             mybutton(
-                                text="Fathers Day",
-                                on_click=lambda _: print("Mothers Day"),
+                                text=FATHERSDAY(page=page),
+                                on_click=lambda _: print(FATHERSDAY(page=page)),
                                 width=page.width * 0.5,
                             )
                         ]
