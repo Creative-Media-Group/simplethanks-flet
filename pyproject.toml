@@ -4,7 +4,7 @@ version = "2025.4.21"
 description = ""
 readme = "README.md"
 requires-python = ">=3.9"
-authors = [{ name = "Flet developer", email = "you@example.com" }]
+authors = [{ name = "tct123", email = "you@example.com" }]
 dependencies = ["flet==0.28.2", "mylocale", "flet_localisation", "flet-audio"]
 
 [tool.flet]
