@@ -11,6 +11,7 @@ from localisation import (
     SUPPORTEDPLATFORM,
     THANKYOU,
 )
+from flet_share_plus import SharePlus
 
 
 def mybutton(text: str, on_click, width: int, disabled: bool = False):
@@ -43,11 +44,23 @@ def main(page: ft.Page):
     page.on_resized = on_resized
     # page.scroll = ft.ScrollMode.AUTO
     # page.expand = True
+    share = SharePlus()
     audio1 = fta.Audio(
         src="happy-birthday-whistled.wav",
     )
-    page.appbar = ft.AppBar(title=ft.Text("Simple Thanks"))
+    page.appbar = ft.AppBar(
+        title=ft.Text("Simple Thanks"),
+        actions=[
+            ft.IconButton(
+                icon=ft.Icons.SHARE,
+                on_click=lambda _: share.share_uri(
+                    uri="https://github.com/Creative-Media-Group/simplethanks-flet"
+                ),
+            )
+        ],
+    )
     page.overlay.append(audio1)
+    page.overlay.append(share)
     page.add(
         ft.SafeArea(
             ft.Column(
