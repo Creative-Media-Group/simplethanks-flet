@@ -1,5 +1,16 @@
 import flet as ft
 import flet_audio as fta
+from localisation import (
+    BIRTHDAY,
+    DESCRIPTION,
+    FATHERSDAY,
+    FORMALNAME,
+    HAPPYFATHERSDAY,
+    HAPPYMOTHERSDAY,
+    MOTHERSDAY,
+    SUPPORTEDPLATFORM,
+    THANKYOU,
+)
 
 
 def mybutton(text: str, on_click, width: int, disabled: bool = False):
