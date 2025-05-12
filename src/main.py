@@ -53,7 +53,7 @@ def main(page: ft.Page):
             ft.Column(
                 controls=[
                     ft.Row(
-                        controls=[ft.Text(THANKYOU(page=page))],
+                        controls=[ft.Text(THANKYOU(page=page), size=50)],
                         alignment=ft.MainAxisAlignment.CENTER,
                     ),
                     ft.Row(
