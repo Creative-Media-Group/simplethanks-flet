@@ -6,12 +6,45 @@ import flet as ft
 trfile = f"{os.path.dirname(__file__)}/localisation.csv"
 
 
-def HELLOMSG(page):
+def BIRTHDAY(page):
     myplatfom = str(page.platform)
     langcode = str(locale(platform=myplatfom)).split("_")[0]
     region = str(locale(platform=myplatfom)).split("_")[1]
     return tr(
         csv_file=trfile,
-        target_key="HELLOMSG",
+        target_key="BIRTHDAY",
+        langcode=langcode,
+    )
+
+
+def FATHERSDAY(page):
+    myplatfom = str(page.platform)
+    langcode = str(locale(platform=myplatfom)).split("_")[0]
+    region = str(locale(platform=myplatfom)).split("_")[1]
+    return tr(
+        csv_file=trfile,
+        target_key="FATHERSDAY",
+        langcode=langcode,
+    )
+
+
+def HAPPYFATHERSDAY(page):
+    myplatfom = str(page.platform)
+    langcode = str(locale(platform=myplatfom)).split("_")[0]
+    region = str(locale(platform=myplatfom)).split("_")[1]
+    return tr(
+        csv_file=trfile,
+        target_key="HAPPYFATHERSDAY",
+        langcode=langcode,
+    )
+
+
+def HAPPYMOTHERSDAY(page):
+    myplatfom = str(page.platform)
+    langcode = str(locale(platform=myplatfom)).split("_")[0]
+    region = str(locale(platform=myplatfom)).split("_")[1]
+    return tr(
+        csv_file=trfile,
+        target_key="HAPPYMOTHERSDAY",
         langcode=langcode,
     )
