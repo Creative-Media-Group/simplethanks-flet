@@ -1,7 +1,7 @@
 [project]
 name = "simplethanks"
 version = "2025.4.21"
-description = ""
+description = "Just a simple thanks"
 readme = "README.md"
 requires-python = ">=3.9"
 authors = [{ name = "tct123", email = "you@example.com" }]
