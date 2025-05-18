@@ -5,7 +5,13 @@ description = ""
 readme = "README.md"
 requires-python = ">=3.9"
 authors = [{ name = "tct123", email = "you@example.com" }]
-dependencies = ["flet==0.28.2", "mylocale", "flet_localisation", "flet-audio","flet-share-plus @ git+https://github.com/tct123/flet_shareplus.git"]
+dependencies = [
+  "flet==0.28.2",
+  "mylocale",
+  "flet_localisation",
+  "flet-audio",
+  "flet-share-plus @ git+https://github.com/tct123/flet_shareplus.git",
+]
 
 [tool.flet]
 # org name in reverse domain name notation, e.g. "com.mycompany".
@@ -20,21 +26,17 @@ product = "Simple Thanks"
 company = "Creative Media Group"
 
 [tool.flet.android]
-dependencies = [
-  "pyjnius"
-]
+dependencies = ["pyjnius"]
 
 [tool.flet.ios]
-dependencies = [
-  "pyobjus"
-]
+dependencies = ["pyobjus"]
 
 [tool.flet.android.signing]
 # store and key passwords can be passed with `--android-signing-key-store-password`
 # and `--android-signing-key-password` options or
 # FLET_ANDROID_SIGNING_KEY_STORE_PASSWORD
 # and FLET_ANDROID_SIGNING_KEY_PASSWORD environment variables.
-key_store = "~/Dokumente/GitHub/keystores-cmg/release.jks" # --android-signing-key-store
+key_store = "release.jks" # --android-signing-key-store
 key_alias = "cmg"
 
 # copyright text to display in about app dialogs
