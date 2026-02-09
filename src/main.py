@@ -34,7 +34,7 @@ def main(page: ft.Page):
     def on_resized(e):
         page.update()
 
-    async def play():
+    async def play(e):
         await audio1.play()
 
     url_launcher = ft.UrlLauncher()
@@ -51,9 +51,7 @@ def main(page: ft.Page):
     # page.scroll = ft.ScrollMode.AUTO
     # page.expand = True
 
-    audio1 = fta.Audio(
-        src="happy-birthday-whistled.wav",
-    )
+    audio1 = fta.Audio(src="happy-birthday-whistled.wav", autoplay=False)
     page.appbar = ft.AppBar(
         title=ft.Text("Simple Thanks"),
         actions=[ft.IconButton(icon=ft.Icons.SHARE, on_click=opengithub)],
@@ -112,4 +110,4 @@ def main(page: ft.Page):
     )
 
 
-ft.run(main, assets_dir="assets")
+ft.run(main, assets_dir="src/assets")
