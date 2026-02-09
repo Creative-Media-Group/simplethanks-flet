@@ -97,9 +97,7 @@ def main(page: ft.Page):
                         controls=[
                             mybutton(
                                 text="Website",
-                                on_click=lambda _: url_launcher.launch_url(
-                                    url="https://github.com/Creative-Media-Group/simplethanks-flet"
-                                ),
+                                on_click=opengithub,
                                 width=page.width * 0.5,
                             )
                         ]
@@ -114,4 +112,4 @@ def main(page: ft.Page):
     )
 
 
-ft.run(main)
+ft.run(main, assets_dir="assets")
