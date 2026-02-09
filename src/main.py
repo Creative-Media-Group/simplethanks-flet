@@ -30,13 +30,12 @@ def mybutton(text: str, on_click, width: int, disabled: bool = False):
     )
 
 
-def play(audio_obj: ft.Control):
-    audio_obj.play()
-
-
-async def main(page: ft.Page):
+def main(page: ft.Page):
     def on_resized(e):
         page.update()
+
+    async def play():
+        await audio1.play()
 
     url_launcher = ft.UrlLauncher()
 
@@ -57,9 +56,8 @@ async def main(page: ft.Page):
     )
     page.appbar = ft.AppBar(
         title=ft.Text("Simple Thanks"),
-        actions=[ft.IconButton(icon=ft.Icons.SHARE, on_click=lambda _: opengithub)],
+        actions=[ft.IconButton(icon=ft.Icons.SHARE, on_click=opengithub)],
     )
-    page.overlay.append(audio1)
     page.add(
         ft.SafeArea(
             ft.Column(
@@ -72,7 +70,7 @@ async def main(page: ft.Page):
                         controls=[
                             mybutton(
                                 text=BIRTHDAY(page=page),
-                                on_click=lambda _: play(audio_obj=audio1),
+                                on_click=lambda _: play,
                                 width=page.width * 0.5,
                             )
                         ]
