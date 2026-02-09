@@ -11,6 +11,11 @@ from localisation import (
     SUPPORTEDPLATFORM,
     THANKYOU,
 )
+import asyncio
+
+
+async def myopen(page: ft.Page):
+    await page.launch_url("https://github.com/Creative-Media-Group/simplethanks-flet")
 
 
 def mybutton(text: str, on_click, width: int, disabled: bool = False):
@@ -33,7 +38,7 @@ def play(audio_obj: ft.Control):
     audio_obj.play()
 
 
-def main(page: ft.Page):
+async def main(page: ft.Page):
     def on_resized(e):
         page.update()
 
@@ -98,9 +103,7 @@ def main(page: ft.Page):
                         controls=[
                             mybutton(
                                 text="Website",
-                                on_click=lambda _: page.launch_url(
-                                    "https://github.com/Creative-Media-Group/simplethanks-flet"
-                                ),
+                                on_click=lambda _: asyncio.run(myopen),
                                 width=page.width * 0.5,
                             )
                         ]
