@@ -14,10 +14,6 @@ from localisation import (
 import asyncio
 
 
-async def myopen(page: ft.Page):
-    await page.launch_url("https://github.com/Creative-Media-Group/simplethanks-flet")
-
-
 def mybutton(text: str, on_click, width: int, disabled: bool = False):
     return ft.Button(
         content=ft.Text(text, size=20),
@@ -42,6 +38,13 @@ async def main(page: ft.Page):
     def on_resized(e):
         page.update()
 
+    url_launcher = ft.UrlLauncher()
+
+    async def opengithub():
+        await url_launcher.launch_url(
+            url="https://github.com/Creative-Media-Group/simplethanks-flet"
+        )
+
     page.adaptive = True
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
@@ -54,14 +57,7 @@ async def main(page: ft.Page):
     )
     page.appbar = ft.AppBar(
         title=ft.Text("Simple Thanks"),
-        actions=[
-            ft.IconButton(
-                icon=ft.Icons.SHARE,
-                on_click=lambda _: page.launch_url(
-                    "https://github.com/Creative-Media-Group/simplethanks-flet"
-                ),
-            )
-        ],
+        actions=[ft.IconButton(icon=ft.Icons.SHARE, on_click=lambda _: opengithub)],
     )
     page.overlay.append(audio1)
     page.add(
@@ -103,7 +99,9 @@ async def main(page: ft.Page):
                         controls=[
                             mybutton(
                                 text="Website",
-                                on_click=lambda _: asyncio.run(myopen),
+                                on_click=lambda _: url_launcher.launch_url(
+                                    url="https://github.com/Creative-Media-Group/simplethanks-flet"
+                                ),
                                 width=page.width * 0.5,
                             )
                         ]
@@ -118,4 +116,4 @@ async def main(page: ft.Page):
     )
 
 
-ft.run(main=main)
+ft.run(main)
