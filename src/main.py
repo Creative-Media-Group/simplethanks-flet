@@ -47,7 +47,7 @@ def main(page: ft.Page):
     page.adaptive = True
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
-    page.on_resized = on_resized
+    page.on_resize = on_resized
     # page.scroll = ft.ScrollMode.AUTO
     # page.expand = True
 
