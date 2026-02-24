@@ -5,10 +5,10 @@ description = "Just a simple thanks"
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [{ name = "tct123", email = "tct1234@protonmail.com" }]
-dependencies = ["flet>=0.80.5", "mylocale", "flet_localisation", "flet-audio"]
+dependencies = ["flet>=0.81.0", "mylocale", "flet_localisation", "flet-audio"]
 
 [dependency-groups]
-dev = ["flet-cli>=0.80.5", "flet-desktop>=0.80.5", "flet-web>=0.80.5"]
+dev = ["flet-cli>=0.81.0", "flet-desktop>=0.81.0", "flet-web>=0.81.0"]
 
 [tool.flet]
 org = "de.cmg"
