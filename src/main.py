@@ -20,13 +20,15 @@ def mybutton(text: str, on_click, width: int, disabled: bool = False):
         height=50,
         width=width,
         on_click=on_click,
-        bgcolor={
-            ft.ControlState.DEFAULT: ft.Colors.RED,
-            ft.ControlState.PRESSED: ft.Colors.TRANSPARENT,
-        },
         expand=True,
         disabled=disabled,
-        style=ft.ButtonStyle(shape=ft.RoundedRectangleBorder(radius=10)),
+        style=ft.ButtonStyle(
+            shape=ft.RoundedRectangleBorder(radius=10),
+            bgcolor={
+                ft.ControlState.DEFAULT: ft.Colors.RED,
+                ft.ControlState.PRESSED: ft.Colors.TRANSPARENT,
+            },
+        ),
     )
 
 
@@ -69,7 +71,11 @@ def main(page: ft.Page):
                             mybutton(
                                 text=BIRTHDAY(page=page),
                                 on_click=lambda _: play,
-                                width=page.width * 0.5,
+                                width=(
+                                    int(page.width * 0.5)
+                                    if page.width is not None
+                                    else 200
+                                ),
                             )
                         ]
                     ),
@@ -78,7 +84,11 @@ def main(page: ft.Page):
                             mybutton(
                                 text=MOTHERSDAY(page=page),
                                 on_click=lambda _: print(MOTHERSDAY(page=page)),
-                                width=page.width * 0.5,
+                                width=(
+                                    int(page.width * 0.5)
+                                    if page.width is not None
+                                    else 200
+                                ),
                             )
                         ]
                     ),
@@ -87,7 +97,11 @@ def main(page: ft.Page):
                             mybutton(
                                 text=FATHERSDAY(page=page),
                                 on_click=lambda _: print(FATHERSDAY(page=page)),
-                                width=page.width * 0.5,
+                                width=(
+                                    int(page.width * 0.5)
+                                    if page.width is not None
+                                    else 200
+                                ),
                             )
                         ]
                     ),
@@ -96,12 +110,16 @@ def main(page: ft.Page):
                             mybutton(
                                 text="Website",
                                 on_click=opengithub,
-                                width=page.width * 0.5,
+                                width=(
+                                    int(page.width * 0.5)
+                                    if page.width is not None
+                                    else 200
+                                ),
                             )
                         ]
                     ),
                 ],
-                # width=page.width * 0.5,
+                # width=int(page.width * 0.5),
                 # scroll=True,
                 expand=True,
                 alignment=ft.MainAxisAlignment.CENTER,
