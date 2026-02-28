@@ -53,7 +53,18 @@ def main(page: ft.Page):
     # page.scroll = ft.ScrollMode.AUTO
     # page.expand = True
 
-    audio1 = fta.Audio(src="happy-birthday-whistled.wav", autoplay=False)
+    audio1 = fta.Audio(
+        src="happy-birthday-whistled.wav",
+        autoplay=False,
+        volume=1,
+        balance=0,
+        release_mode=fta.ReleaseMode.STOP,
+        on_loaded=lambda _: print("Loaded"),
+        on_duration_change=lambda e: print("Duration changed:", e.duration),
+        on_position_change=lambda e: print("Position changed:", e.position),
+        on_state_change=lambda e: print("State changed:", e.state),
+        on_seek_complete=lambda _: print("Seek complete"),
+    )
     page.appbar = ft.AppBar(
         title=ft.Text("Simple Thanks"),
         actions=[ft.IconButton(icon=ft.Icons.SHARE, on_click=opengithub)],
