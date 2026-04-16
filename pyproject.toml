@@ -5,12 +5,13 @@ description = "Just a simple thanks"
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [{ name = "tct123", email = "tct1234@protonmail.com" }]
-dependencies = ["flet>=0.81.0", "mylocale", "flet_localisation", "flet-audio"]
+dependencies = ["flet>=0.84.0", "mylocale", "flet_localisation", "flet-audio"]
 
 [dependency-groups]
-dev = ["flet-cli>=0.81.0", "flet-desktop>=0.81.0", "flet-web>=0.81.0"]
+dev = ["flet-cli>=0.84.0", "flet-desktop>=0.84.0", "flet-web>=0.84.0"]
 
 [tool.flet]
+desktop_flavor = "full"                                       # Change to "full" to use flet-audio and flet-video
 org = "de.cmg"
 product = "Simple Thanks"
 company = "Creative Media Group"
