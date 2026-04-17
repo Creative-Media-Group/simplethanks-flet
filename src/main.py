@@ -43,7 +43,8 @@ def main(page: ft.Page):
 
     async def opengithub():
         await url_launcher.launch_url(
-            url="https://github.com/Creative-Media-Group/simplethanks-flet"
+            url="https://github.com/Creative-Media-Group/simplethanks-flet",
+            mode=ft.LaunchMode.EXTERNAL_APPLICATION,
         )
 
     page.adaptive = True
